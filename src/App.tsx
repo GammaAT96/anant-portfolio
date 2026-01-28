@@ -7,7 +7,7 @@ import Index from "./pages/Index";
 import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
-import Notes from "./pages/Notes";
+// Removed: import Notes from "./pages/Notes";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -24,7 +24,7 @@ const App = () => (
           <Route path="/skills" element={<Skills />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
-          <Route path="/notes" element={<Notes />} />
+          {/* Removed: <Route path="/notes" element={<Notes />} /> */}
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
