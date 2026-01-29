@@ -1,25 +1,33 @@
 import Layout from "@/components/Layout";
 import { Sparkle, SparkleGroup } from "@/components/Sparkle";
-import { Mail, Github, Linkedin, Send } from "lucide-react";
+import { Mail, Github, Linkedin, Send, Twitter } from "lucide-react";
+// 1. IMPORT YOUR DATA
+import { personalDetails } from "@/portfolioData";
 
 const contactLinks = [
   {
     icon: Mail,
     label: "Email",
-    value: "anant@example.com",
-    href: "mailto:anant@example.com",
+    value: personalDetails.email,
+    href: `mailto:${personalDetails.email}`,
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/anant",
-    href: "https://github.com",
+    value: "GammaAT96",
+    href: personalDetails.social.github,
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/anant",
-    href: "https://linkedin.com",
+    value: "Anant Tripathi",
+    href: personalDetails.social.linkedin,
+  },
+  {
+    icon: Twitter,
+    label: "Twitter/X",
+    value: "@anantdev5114",
+    href: personalDetails.social.twitter,
   },
 ];
 
@@ -37,8 +45,7 @@ const Contact = () => {
           <div className="text-center mb-12">
             <h1 className="section-title mb-4">Let's Connect</h1>
             <p className="hero-subtitle mx-auto">
-              Open to internships, learning opportunities, collaborations, 
-              or just a friendly chat about tech.
+              Open to internships, learning opportunities, and collaborations.
             </p>
           </div>
 
