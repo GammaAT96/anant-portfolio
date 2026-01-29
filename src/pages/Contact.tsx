@@ -4,34 +4,35 @@ import { Mail, Github, Linkedin, Send, Twitter } from "lucide-react";
 // 1. IMPORT YOUR DATA
 import { personalDetails } from "@/portfolioData";
 
-const contactLinks = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: personalDetails.email,
-    href: `mailto:${personalDetails.email}`,
-  },
-  {
-    icon: Github,
-    label: "GitHub",
-    value: "GammaAT96",
-    href: personalDetails.social.github,
-  },
-  {
-    icon: Linkedin,
-    label: "LinkedIn",
-    value: "Anant Tripathi",
-    href: personalDetails.social.linkedin,
-  },
-  {
-    icon: Twitter,
-    label: "Twitter/X",
-    value: "@anantdev5114",
-    href: personalDetails.social.twitter,
-  },
-];
-
 const Contact = () => {
+  // 2. CREATE LINKS USING YOUR REAL DATA
+  const contactLinks = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: personalDetails.email, // This pulls "gammadeveloper5114@gmail.com"
+      href: `mailto:${personalDetails.email}`,
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "GammaAT96",
+      href: personalDetails.social.github,
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "Anant Tripathi",
+      href: personalDetails.social.linkedin,
+    },
+    {
+      icon: Twitter,
+      label: "Twitter/X",
+      value: "@anantdev5114",
+      href: personalDetails.social.twitter,
+    },
+  ];
+
   return (
     <Layout>
       <section className="relative py-12 px-4 min-h-[70vh]">
@@ -49,7 +50,6 @@ const Contact = () => {
             </p>
           </div>
 
-          {/* Contact Cards */}
           <div className="space-y-4 mb-12">
             {contactLinks.map((link, index) => (
               <a
@@ -72,29 +72,6 @@ const Contact = () => {
                 <Send className="w-4 h-4 text-muted-foreground" />
               </a>
             ))}
-          </div>
-
-          {/* CTA Message */}
-          <div className="bg-gradient-cream rounded-3xl p-8 md:p-10 text-center animate-fade-in-up animation-delay-400">
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-primary mb-4">
-              Looking for a passionate learner?
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm actively seeking internship opportunities where I can contribute, 
-              learn from experienced developers, and grow as a software engineer. 
-              I bring enthusiasm, consistency, and a genuine love for building things.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Full-Stack Development
-              </span>
-              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Backend Engineering
-              </span>
-              <span className="px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium">
-                Software Development
-              </span>
-            </div>
           </div>
         </div>
       </section>
