@@ -1,35 +1,33 @@
 import Layout from "@/components/Layout";
 import { Sparkle, SparkleGroup } from "@/components/Sparkle";
 import { Mail, Github, Linkedin, Send, Twitter } from "lucide-react";
-// 1. IMPORT YOUR DATA
-import { personalDetails } from "@/portfolioData";
 
 const Contact = () => {
-  // 2. CREATE LINKS USING YOUR REAL DATA
+  // Directly using your details here to ensure they display correctly
   const contactLinks = [
     {
       icon: Mail,
       label: "Email",
-      value: personalDetails.email, // This pulls "gammadeveloper5114@gmail.com"
-      href: `mailto:${personalDetails.email}`,
+      value: "gammadeveloper5114@gmail.com",
+      href: "mailto:gammadeveloper5114@gmail.com",
     },
     {
       icon: Github,
       label: "GitHub",
       value: "GammaAT96",
-      href: personalDetails.social.github,
+      href: "https://github.com/GammaAT96",
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
       value: "Anant Tripathi",
-      href: personalDetails.social.linkedin,
+      href: "https://www.linkedin.com/in/anant-tripathi-202157325",
     },
     {
       icon: Twitter,
       label: "Twitter/X",
       value: "@anantdev5114",
-      href: personalDetails.social.twitter,
+      href: "https://x.com/anantdev5114",
     },
   ];
 
@@ -72,6 +70,16 @@ const Contact = () => {
                 <Send className="w-4 h-4 text-muted-foreground" />
               </a>
             ))}
+          </div>
+
+          <div className="bg-gradient-cream rounded-3xl p-8 md:p-10 text-center animate-fade-in-up animation-delay-400">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-primary mb-4">
+              Looking for a passionate learner?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              I'm actively seeking internship opportunities where I can contribute, 
+              learn from experienced developers, and grow as a software engineer. 
+            </p>
           </div>
         </div>
       </section>
